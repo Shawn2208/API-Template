@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-// AController will need replacing with whatever you choose to rename it to.
+// GenericController will need replacing with whatever you choose to rename it to.
 
 const GenericController = require('./Controller/GenericController'); 
 
