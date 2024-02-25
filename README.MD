@@ -1,6 +1,6 @@
 # Creating an API couldn't be any easier with this template
 
-# This template provides a foundational structure for building your own API with Node.js, Express, and Mongoose. To tailor it to your specific project needs, you'll need to replace certain parts, as indicated in each file, with your own content, including the collection and database names.
+This template provides a foundational structure for building your own API with Node.js, Express, and Mongoose. To tailor it to your specific project needs, you'll need to replace certain parts, as indicated in each file, with your own content, including the collection and database names.
 
 Naming Conventions
 
