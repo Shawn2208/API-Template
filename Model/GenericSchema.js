@@ -17,7 +17,7 @@ const GenericSchema = new mongoose.Schema({
     }
 });
 
-// Renaming NameOfCollection to GenericModel to reflect the generic nature of this schema
+// Rename GenericModel to whatever you want 'RecipeModel' for example
 const GenericModel = mongoose.model('GenericModel', GenericSchema); // Replace 'GenericModel' with the actual name of your collection
 
 // Exporting so it can be used in the controller file
