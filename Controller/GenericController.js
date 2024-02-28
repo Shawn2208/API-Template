@@ -6,6 +6,7 @@ exports.createGeneric = async (req, res) => {
         // Instantiate your model with request body. Rename 'generic' to fit your model, e.g., 'recipe'
         const generic = new GenericModel(req.body);
 
+        // Rename createdGeneric to fit your model 'recipe'
         const createdGeneric = await generic.save();
 
         res.status(201).json(createdGeneric);
@@ -17,9 +18,12 @@ exports.createGeneric = async (req, res) => {
     }
 };
 
+// Rename 'generic' to fit your model, e.g., 'getAllRecipes'
 exports.getAllGenerics = async (req, res) => {
     try {
-        const generics = await GenericModel.find(); // Rename 'generics' to match your model plural form
+        
+        // Rename 'generic' to fit your model, e.g., 'recipe'
+        const generics = await GenericModel.find(); 
 
         res.status(200).json(generics);
     } catch (error) {
@@ -30,10 +34,14 @@ exports.getAllGenerics = async (req, res) => {
     }
 };
 
+// Rename 'generic' to fit your model, e.g., 'getRecipeById'
 exports.getGenericById = async (req, res) => {
     try {
+
+        // Rename 'generic' to fit your model, e.g., 'recipeId'
         const genericId = req.params.id;
 
+        // And again rename to fit your model example 'recipe'
         const generic = await GenericModel.findById(genericId);
 
         if (!generic) {
@@ -51,10 +59,13 @@ exports.getGenericById = async (req, res) => {
     }
 };
 
+// Rename 'generic' to fit your model, e.g., 'updateRecipeById'
 exports.updateGenericById = async (req, res) => {
     try {
+        // Rename genericId to something to fit your model like 'recipeId'
         const genericId = req.params.id.trim();
 
+        // And again rename to fit your model example 'updatedRecipe'
         const updatedGeneric = await GenericModel.findByIdAndUpdate(genericId, req.body, { new: true });
 
         if (!updatedGeneric) {
@@ -72,10 +83,13 @@ exports.updateGenericById = async (req, res) => {
     }
 };
 
+// Rename 'generic' to fit your model, e.g., 'deleteRecipeById'
 exports.deleteGenericById = async (req, res) => {
     try {
+        // Rename genericId to something to fit your model like 'recipeId'
         const genericId = req.params.id.trim();
 
+        // And again rename to fit your model example 'deletedRecipe'
         const deletedGeneric = await GenericModel.findByIdAndDelete(genericId);
 
         if (!deletedGeneric) {
