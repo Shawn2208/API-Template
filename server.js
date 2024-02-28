@@ -4,7 +4,6 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 // GenericController will need replacing with whatever you choose to rename it to.
-
 const GenericController = require('./Controller/GenericController'); 
 
 mongoose.connect(process.env.DB_URL, {
@@ -21,10 +20,12 @@ app.use(cors());
 
 // Define The API Routes
 
-// AController will need renaming
-// 
+// Controller/GenericController.js will need renaming
+
+// rename the GenericController to your model and rename the createGeneric to your model in the controller file
 app.post('/api/endpoint', GenericController.createGeneric); // route handler will need renaming 
 
+// Rename all the endpoints.
 app.get('/api/endpoint', GenericController.getAllGenerics); // route handler will need renaming 
 
 app.get('/api/endpoint/:id', GenericController.getGenericById); // route handler will need renaming 
